@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<properties>
+		<title>Library CRM Client</title>
+	</properties>
+	<body>
+		<section name="Library CRM Client">
+			<subsection name="Introduction">
+				<p>
+					This library provides the CRM Client interfaces.
+				</p>
+			</subsection>
+		</section>
+	</body>
+</document>
