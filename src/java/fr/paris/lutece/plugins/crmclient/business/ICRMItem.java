@@ -58,7 +58,6 @@ public interface ICRMItem extends Serializable
     String DEMAND_DATA = "demand_data";
     String USER_ATTRIBUTE = "attribute";
     String MEDIA_TYPE = "media_type";
-    
 
     /**
      * Get the url for WS
@@ -78,7 +77,6 @@ public interface ICRMItem extends Serializable
      */
     Map<String, String> getParameters(  );
 
-  
     /**
      * @return strCRMWebAppBaseURL the CRM webapp URL
      */
@@ -90,17 +88,16 @@ public interface ICRMItem extends Serializable
      * @param strValue the value of the parameter
      */
     void putParameter( String strKey, String strValue );
-    
-    
+
     /**
      * the CRM web app Code
      * @return the CRM web app Code
      */
-	 String getCRMWebAppCode();
-   
-	 /**
-	  * set  the CRM web app code
-	  * @param _strmCRMWebAppCode  the CRM web app code
-	  */
-	 void setCRMWebAppCode(String _strmCRMWebAppCode);
+    String getCRMWebAppCode(  );
+
+    /**
+     * set  the CRM web app code
+     * @param _strmCRMWebAppCode  the CRM web app code
+     */
+    void setCRMWebAppCode( String _strmCRMWebAppCode );
 }
