@@ -40,8 +40,18 @@ package fr.paris.lutece.plugins.crmclient.business;
  *
  */
 public enum CRMItemTypeEnum
-{DEMAND( "crmclient.crmItemDemand" ),
-    NOTIFICATION( "crmclient.crmItemNotification" );
+{   DEMAND_UPDATE( "crmclient.crmItemDemandUpdate" ),
+	DEMAND_CREATE_BY_USER_GUID( "crmclient.crmItemDemandCreateByUserGuid" ),
+	DEMAND_CREATE_BY_ID_CRM_USER( "crmclient.crmItemDemandCreateByIdCRMUser" ),
+	DEMAND_DELETE( "crmclient.crmItemDemandDelete" ),
+	DEMAND_USER_GUID( "crmclient.crmItemDemandUserGuid" ),
+	DEMAND_DEMAND_JSON( "crmclient.crmItemDemandDemandJson" ),
+	DEMAND_DEMAND_XML( "crmclient.crmItemDemandDemandXml" ),
+	USER_GUID( "crmclient.crmItemUserGuidByIdCRMUser" ),
+	USER_ATTRIBUTE( "crmclient.crmItemUserAttribute" ),
+	USER_ATTRIBUTES_XML( "crmclient.crmItemUserAttributesXml" ),
+	USER_ATTRIBUTES_JSON( "crmclient.crmItemUserAttributesJson" ),
+	NOTIFICATION( "crmclient.crmItemNotification" );
 
     private String _strBeanName;
 

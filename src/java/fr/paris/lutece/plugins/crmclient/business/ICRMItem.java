@@ -51,6 +51,14 @@ public interface ICRMItem extends Serializable
     String NOTIFICATION_SENDER = "notification_sender";
     String ID_DEMAND = "id_demand";
     String STATUS_TEXT = "status_text";
+    String ID_DEMAND_TYPE = "id_demand_type";
+    String USER_GUID = "user_guid";
+    String ID_STATUS_CRM = "id_status_crm";
+    String ID_CRM_USER = "id_crm_user";
+    String DEMAND_DATA = "demand_data";
+    String USER_ATTRIBUTE = "attribute";
+    String MEDIA_TYPE = "media_type";
+    
 
     /**
      * Get the url for WS
@@ -70,12 +78,7 @@ public interface ICRMItem extends Serializable
      */
     Map<String, String> getParameters(  );
 
-    /**
-     * Set the CRM webapp base URL
-     * @param strCRMWebAppBaseURL the CRM webapp URL
-     */
-    void setCRMWebAppBaseURL( String strCRMWebAppBaseURL );
-
+  
     /**
      * @return strCRMWebAppBaseURL the CRM webapp URL
      */
@@ -87,4 +90,17 @@ public interface ICRMItem extends Serializable
      * @param strValue the value of the parameter
      */
     void putParameter( String strKey, String strValue );
+    
+    
+    /**
+     * the CRM web app Code
+     * @return the CRM web app Code
+     */
+	 String getCRMWebAppCode();
+   
+	 /**
+	  * set  the CRM web app code
+	  * @param _strmCRMWebAppCode  the CRM web app code
+	  */
+	 void setCRMWebAppCode(String _strmCRMWebAppCode);
 }

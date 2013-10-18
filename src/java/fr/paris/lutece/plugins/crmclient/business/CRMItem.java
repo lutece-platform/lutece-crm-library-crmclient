@@ -36,20 +36,23 @@ package fr.paris.lutece.plugins.crmclient.business;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import org.apache.commons.lang.StringUtils;
+
+import fr.paris.lutece.portal.service.util.AppPropertiesService;
+
 
 /**
  *
  * AbstractCRMItem
  *
  */
-public class CRMItem implements ICRMItem
+public abstract	class  CRMItem implements ICRMItem
 {
     private static final long serialVersionUID = 4324796594271864562L;
-
+    private static final String PROPERTY_WS_CRM_REST_WEBAPP_URL = "crmclient.crm.rest.webapp.url";
     // Private parameters
     private Map<String, String> _mapParameters = new LinkedHashMap<String, String>(  );
-    private String _strCRMWebAppBaseURL;
-    private String _strCRMRestURL;
+    private String _strmCRMWebAppCode;
 
     /**
      * Constructor
@@ -58,16 +61,7 @@ public class CRMItem implements ICRMItem
     {
     }
 
-    /**
-     * Constructor
-     * @param strCRMWebAppBaseURL the CRM webApp base URL
-     * @param strCRMRestURL the CRM REST URL
-     */
-    public CRMItem( String strCRMWebAppBaseURL, String strCRMRestURL )
-    {
-        _strCRMWebAppBaseURL = strCRMWebAppBaseURL;
-        _strCRMRestURL = strCRMRestURL;
-    }
+
 
     /**
      * {@inheritDoc}
@@ -97,29 +91,36 @@ public class CRMItem implements ICRMItem
     }
 
     /**
-         * {@inheritDoc}
-         */
+     * {@inheritDoc}
+     */
+    @Override
+	public String getCRMWebAppCode() {
+		return _strmCRMWebAppCode;
+	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+	public void setCRMWebAppCode(String _strmCRMWebAppCode) {
+		this._strmCRMWebAppCode = _strmCRMWebAppCode;
+	}
+    
+    
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getCRMWebAppBaseURL(  )
     {
-        return _strCRMWebAppBaseURL;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void setCRMWebAppBaseURL( String strCRMWebAppBaseURL )
-    {
-        _strCRMWebAppBaseURL = strCRMWebAppBaseURL;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String getUrlForWS(  )
-    {
-        return _strCRMWebAppBaseURL + _strCRMRestURL;
+       
+    		StringBuffer strPropertyWebAppUrl=new StringBuffer();
+    		strPropertyWebAppUrl.append( PROPERTY_WS_CRM_REST_WEBAPP_URL );
+    		if( !StringUtils.isBlank(getCRMWebAppCode ( ) ) )
+    		{
+    			strPropertyWebAppUrl.append(".");
+    			strPropertyWebAppUrl.append(getCRMWebAppCode ( ) );
+    		}
+    			return AppPropertiesService.getProperty( strPropertyWebAppUrl.toString());
+          
     }
 }
