@@ -70,6 +70,19 @@ public interface ICRMClientService
      * @param strCRMWebAppCode the CRM webapp code
      */
     void notify( String strIdDemand, String strObject, String strMessage, String strSender, String strCRMWebAppCode );
+    
+    /**
+     * Notify a demand using remote id and id demand type
+     * @param strRemoteId the Remote Id
+     * @param strIdDemandType id of demand type
+     * @param strObject the object
+     * @param strMessage the message
+     * @param strSender the sender
+     * @param strCRMWebAppCode the CRM webapp code
+     */
+    void notifyV2( String strRemoteId, String strIdDemandType,String strObject, String strMessage, String strSender, String strCRMWebAppCode );
+    
+    
 
     /**
      * Update a demand
@@ -113,6 +126,22 @@ public interface ICRMClientService
      */
     void sendUpdateDemand( String strIdDemand, String strStatusText, String strCRMWebAppCode, String strIdStatusCRM,
         String strData ) throws CRMException;
+    
+    
+    
+
+    /**
+     * Update a demand using remote id and id demand type
+     * @param strRemoteId the Remote Id
+     * @param strIdDemandType id of demand type
+     * @param strStatusText the status text
+     * @param strCRMWebAppCode the CRM webapp code
+     * @param strIdStatusCRM id of CRM status
+     * @param strData the value of the parameter demand_data insert in the demand link
+     * @throws CRMException the exception if there is a problem
+     */
+    void sendUpdateDemandV2( String strRemoteId,String strIdDemandType, String strStatusText, String strCRMWebAppCode, String strIdStatusCRM,
+        String strData ) throws CRMException;
 
     /**
      * This method calls create a new demand and gets the id demand
@@ -141,6 +170,28 @@ public interface ICRMClientService
     String sendCreateDemandByUserGuid( String strIdDemandType, String strUserGuid, String strIdStatusCRM,
         String strStatusText, String strData, String strCRMWebAppCode )
         throws CRMException;
+    
+    
+    /**
+     * This method calls create a new demand using remote id and id demand type
+     * @param strRemoteId the Remote Id
+     * @param strIdDemandType id of demand type
+     * @param strUserGuid login of user auth
+     * @param strIdStatusCRM id of CRM status
+     * @param strStatusText status text
+     * @param strData the value of the parameter demand_data insert in the demand link
+     * @param strCRMWebAppCode the CRM webapp code
+     * @return id demand
+     * @throws CRMException the exception if there is a problem
+     */
+    String sendCreateDemandByUserGuidV2( String strRemoteId,String strIdDemandType, String strUserGuid, String strIdStatusCRM,
+        String strStatusText, String strData, String strCRMWebAppCode  )
+        throws CRMException;
+    
+    
+    
+    
+    
 
     /**
      * This method calls create a new demand and get id demand
@@ -187,6 +238,20 @@ public interface ICRMClientService
      */
     void sendDeleteDemand( String strIdDemand, String strCRMWebAppCode )
         throws CRMException;
+    
+    
+    /**
+     * This method delete a demand using remote id and id demand type
+     * @param strRemoteId the Remote Id
+     * @param strIdDemandType id of demand type
+     * @param strCRMWebAppCode the CRM webapp code
+     * @throws CRMException the exception if there is a problem
+     */
+    void sendDeleteDemandV2( String strRemoteId,String strIdDemandType, String strCRMWebAppCode )
+        throws CRMException;
+    
+    
+    
 
     /**
      * This method calls Rest WS to get the user guid from a given id demand
@@ -245,6 +310,20 @@ public interface ICRMClientService
      */
     String getDemandXml( String strIdDemand, String strCRMWebAppCode )
         throws CRMException;
+    
+    
+    /**
+     * Get the XML of the demand using remote id and id demand type
+     * @param strRemoteId the Remote Id
+     * @param strIdDemandType id of demand type
+     * @param strCRMWebAppCode the CRM webapp code
+     * @return the XML of the demand
+     * @throws CRMException the exception if there is a problem
+     */
+    String getDemandXmlV2(  String strRemoteId,String strIdDemandType, String strCRMWebAppCode )
+        throws CRMException;
+    
+  
 
     /**
      * Get the Json of the demand
@@ -255,7 +334,7 @@ public interface ICRMClientService
     String getDemandJson( String strIdDemand ) throws CRMException;
 
     /**
-     * Get the Json of the demand
+     * Get the Json of the demand 
      * @param strIdDemand the id of the demand
      * @param strCRMWebAppCode the CRM webapp code
      * @return the Json of the demand
@@ -263,6 +342,19 @@ public interface ICRMClientService
      */
     String getDemandJson( String strIdDemand, String strCRMWebAppCode )
         throws CRMException;
+    
+    
+    /**
+     * Get the Json of the demand using remote id and id demand type
+     * @param strRemoteId the Remote Id
+     * @param strIdDemandType id of demand type
+     * @param strCRMWebAppCode the CRM webapp code
+     * @return the Json of the demand
+     * @throws CRMException the exception if there is a problem
+     */
+    String getDemandJsonV2( String strRemoteId,String strIdDemandType, String strCRMWebAppCode )
+        throws CRMException;
+
 
     /**
      * Get the CRMUser attribute value

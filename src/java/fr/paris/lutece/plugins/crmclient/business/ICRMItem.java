@@ -50,6 +50,7 @@ public interface ICRMItem extends Serializable
     String NOTIFICATION_MESSAGE = "notification_message";
     String NOTIFICATION_SENDER = "notification_sender";
     String ID_DEMAND = "id_demand";
+    String REMOTE_ID = "remote_id";
     String STATUS_TEXT = "status_text";
     String ID_DEMAND_TYPE = "id_demand_type";
     String USER_GUID = "user_guid";
