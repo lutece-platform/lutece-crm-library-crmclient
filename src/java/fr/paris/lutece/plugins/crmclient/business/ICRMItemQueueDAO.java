@@ -33,7 +33,6 @@
  */
 package fr.paris.lutece.plugins.crmclient.business;
 
-
 /**
  *
  * This class provides Data Access methods for CRMItemQueue objects
@@ -43,38 +42,48 @@ public interface ICRMItemQueueDAO
 {
     /**
      * Insert a new crm item in the table.
-     * @param crmItemQueue the crm item queue
+     * 
+     * @param crmItemQueue
+     *            the crm item queue
      */
     void insert( CRMItemQueue crmItemQueue );
 
     /**
-     * return the first crm item  in the table
-     * @param nIdCRMItemQueue the id of the crm item
+     * return the first crm item in the table
+     * 
+     * @param nIdCRMItemQueue
+     *            the id of the crm item
      * @return the first crm item in the table
      */
     CRMItemQueue load( int nIdCRMItemQueue );
 
     /**
      * Delete the crm item queue in the table
-     * @param nIdCRMItemQueue The indentifier of the crm item to remove
+     * 
+     * @param nIdCRMItemQueue
+     *            The indentifier of the crm item to remove
      */
     void delete( int nIdCRMItemQueue );
 
     /**
      * Get the number of crm items
+     * 
      * @return the number of crm item present in the database
      */
-    int getCountCRMItem(  );
+    int getCountCRMItem( );
 
     /**
      * Return the next crm item queue id
+     * 
      * @return the next mail item queue id
      */
-    int nextCRMItemQueueId(  );
+    int nextCRMItemQueueId( );
 
     /**
      * Lock the mail item
-     * @param nIdCRMItemQueue the id of the crm item to lock
+     * 
+     * @param nIdCRMItemQueue
+     *            the id of the crm item to lock
      */
     void lockCRMItemQueue( int nIdCRMItemQueue );
 }

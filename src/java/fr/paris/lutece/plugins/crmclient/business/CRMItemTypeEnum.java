@@ -33,39 +33,30 @@
  */
 package fr.paris.lutece.plugins.crmclient.business;
 
-
 /**
  *
  * CRMItemEnum
  *
  */
 public enum CRMItemTypeEnum
-{   DEMAND_UPDATE( "crmclient.crmItemDemandUpdate" ),
-    DEMAND_UPDATE_V2( "crmclient.crmItemDemandUpdateV2" ),
-    DEMAND_CREATE_BY_USER_GUID( "crmclient.crmItemDemandCreateByUserGuid" ),
-    DEMAND_CREATE_BY_USER_GUID_V2( "crmclient.crmItemDemandCreateByUserGuidV2" ),
-    DEMAND_CREATE_BY_ID_CRM_USER( "crmclient.crmItemDemandCreateByIdCRMUser" ),
-    DEMAND_DELETE( "crmclient.crmItemDemandDelete" ),
-    DEMAND_DELETE_V2( "crmclient.crmItemDemandDeleteV2" ),
-    DEMAND_USER_GUID( "crmclient.crmItemDemandUserGuid" ),
-    DEMAND_USER_GUID_V2( "crmclient.crmItemDemandUserGuidV2" ),
-    DEMAND_DEMAND_JSON( "crmclient.crmItemDemandDemandJson" ),
-    DEMAND_DEMAND_JSON_V2( "crmclient.crmItemDemandDemandJsonV2" ),
-    DEMAND_DEMAND_XML( "crmclient.crmItemDemandDemandXml" ),
-    DEMAND_DEMAND_XML_V2( "crmclient.crmItemDemandDemandXmlV2" ),
-    USER_GUID( "crmclient.crmItemUserGuidByIdCRMUser" ),
-    USER_ATTRIBUTE( "crmclient.crmItemUserAttribute" ),
-    USER_ATTRIBUTES_XML( "crmclient.crmItemUserAttributesXml" ),
-    USER_ATTRIBUTES_JSON( "crmclient.crmItemUserAttributesJson" ),
-    NOTIFICATION( "crmclient.crmItemNotification" ),
-    NOTIFICATION_V2( "crmclient.crmItemNotificationV2" ),
-    DEMAND_TYPES( "crmclient.crmItemDemandTypes" );
+{
+    DEMAND_UPDATE( "crmclient.crmItemDemandUpdate" ), DEMAND_UPDATE_V2( "crmclient.crmItemDemandUpdateV2" ), DEMAND_CREATE_BY_USER_GUID(
+            "crmclient.crmItemDemandCreateByUserGuid" ), DEMAND_CREATE_BY_USER_GUID_V2( "crmclient.crmItemDemandCreateByUserGuidV2" ), DEMAND_CREATE_BY_ID_CRM_USER(
+            "crmclient.crmItemDemandCreateByIdCRMUser" ), DEMAND_DELETE( "crmclient.crmItemDemandDelete" ), DEMAND_DELETE_V2( "crmclient.crmItemDemandDeleteV2" ), DEMAND_USER_GUID(
+            "crmclient.crmItemDemandUserGuid" ), DEMAND_USER_GUID_V2( "crmclient.crmItemDemandUserGuidV2" ), DEMAND_DEMAND_JSON(
+            "crmclient.crmItemDemandDemandJson" ), DEMAND_DEMAND_JSON_V2( "crmclient.crmItemDemandDemandJsonV2" ), DEMAND_DEMAND_XML(
+            "crmclient.crmItemDemandDemandXml" ), DEMAND_DEMAND_XML_V2( "crmclient.crmItemDemandDemandXmlV2" ), USER_GUID(
+            "crmclient.crmItemUserGuidByIdCRMUser" ), USER_ATTRIBUTE( "crmclient.crmItemUserAttribute" ), USER_ATTRIBUTES_XML(
+            "crmclient.crmItemUserAttributesXml" ), USER_ATTRIBUTES_JSON( "crmclient.crmItemUserAttributesJson" ), NOTIFICATION(
+            "crmclient.crmItemNotification" ), NOTIFICATION_V2( "crmclient.crmItemNotificationV2" ), DEMAND_TYPES( "crmclient.crmItemDemandTypes" );
 
     private String _strBeanName;
 
     /**
      * Constructor
-     * @param strBeanName the bean name
+     * 
+     * @param strBeanName
+     *            the bean name
      */
     private CRMItemTypeEnum( String strBeanName )
     {
@@ -76,7 +67,7 @@ public enum CRMItemTypeEnum
      * {@inheritDoc}
      */
     @Override
-    public String toString(  )
+    public String toString( )
     {
         return _strBeanName;
     }

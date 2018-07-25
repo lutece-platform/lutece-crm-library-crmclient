@@ -33,7 +33,6 @@
  */
 package fr.paris.lutece.plugins.crmclient.business;
 
-
 /**
  *
  * This class describes a CRM item insert in the queue
@@ -46,16 +45,19 @@ public class CRMItemQueue
 
     /**
      * Get the CRM item
+     * 
      * @return the crm item associate to the CRMItemObject
      */
-    public ICRMItem getCRMItem(  )
+    public ICRMItem getCRMItem( )
     {
         return _crmItem;
     }
 
     /**
      * Set the CRM item
-     * @param crmItem the crm item associate to the CRMItemObject
+     * 
+     * @param crmItem
+     *            the crm item associate to the CRMItemObject
      */
     public void setCRMItem( ICRMItem crmItem )
     {
@@ -64,16 +66,19 @@ public class CRMItemQueue
 
     /**
      * Get the id crm item queue
+     * 
      * @return the id of the CRMItemQueueObject
      */
-    public int getIdCRMItemQueue(  )
+    public int getIdCRMItemQueue( )
     {
         return _nIdCRMItemQueue;
     }
 
     /**
      * Set the id of the CRMItemQueueObject
-     * @param nIdCRMItemQueue the id of the CRMItemQueueObject
+     * 
+     * @param nIdCRMItemQueue
+     *            the id of the CRMItemQueueObject
      */
     public void setIdCRMItemQueue( int nIdCRMItemQueue )
     {

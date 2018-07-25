@@ -40,7 +40,6 @@ import org.apache.commons.lang.StringUtils;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-
 /**
  *
  * AbstractCRMItem
@@ -52,13 +51,13 @@ public abstract class CRMItem implements ICRMItem
     private static final String PROPERTY_WS_CRM_REST_WEBAPP_URL = "crmclient.crm.rest.webapp.url";
 
     // Private parameters
-    private Map<String, String> _mapParameters = new LinkedHashMap<String, String>(  );
+    private Map<String, String> _mapParameters = new LinkedHashMap<String, String>( );
     private String _strmCRMWebAppCode;
 
     /**
      * Constructor
      */
-    public CRMItem(  )
+    public CRMItem( )
     {
     }
 
@@ -75,7 +74,7 @@ public abstract class CRMItem implements ICRMItem
      * {@inheritDoc}
      */
     @Override
-    public Map<String, String> getParameters(  )
+    public Map<String, String> getParameters( )
     {
         return _mapParameters;
     }
@@ -93,7 +92,7 @@ public abstract class CRMItem implements ICRMItem
      * {@inheritDoc}
      */
     @Override
-    public String getCRMWebAppCode(  )
+    public String getCRMWebAppCode( )
     {
         return _strmCRMWebAppCode;
     }
@@ -111,17 +110,17 @@ public abstract class CRMItem implements ICRMItem
      * {@inheritDoc}
      */
     @Override
-    public String getCRMWebAppBaseURL(  )
+    public String getCRMWebAppBaseURL( )
     {
-        StringBuffer strPropertyWebAppUrl = new StringBuffer(  );
+        StringBuffer strPropertyWebAppUrl = new StringBuffer( );
         strPropertyWebAppUrl.append( PROPERTY_WS_CRM_REST_WEBAPP_URL );
 
-        if ( !StringUtils.isBlank( getCRMWebAppCode(  ) ) )
+        if ( !StringUtils.isBlank( getCRMWebAppCode( ) ) )
         {
             strPropertyWebAppUrl.append( "." );
-            strPropertyWebAppUrl.append( getCRMWebAppCode(  ) );
+            strPropertyWebAppUrl.append( getCRMWebAppCode( ) );
         }
 
-        return AppPropertiesService.getProperty( strPropertyWebAppUrl.toString(  ) );
+        return AppPropertiesService.getProperty( strPropertyWebAppUrl.toString( ) );
     }
 }

@@ -39,7 +39,6 @@ import fr.paris.lutece.plugins.crmclient.business.ICRMItemQueueDAO;
 
 import javax.inject.Inject;
 
-
 /**
  *
  * DatabaseQueue
@@ -56,7 +55,7 @@ public class DatabaseQueue implements ICRMClientQueue
     @Override
     public synchronized void send( ICRMItem crmItem )
     {
-        CRMItemQueue crmQueue = new CRMItemQueue(  );
+        CRMItemQueue crmQueue = new CRMItemQueue( );
         crmQueue.setCRMItem( crmItem );
         _crmItemQueueDAO.insert( crmQueue );
     }
@@ -65,15 +64,15 @@ public class DatabaseQueue implements ICRMClientQueue
      * {@inheritDoc}
      */
     @Override
-    public synchronized ICRMItem consume(  )
+    public synchronized ICRMItem consume( )
     {
-        CRMItemQueue crmItemQueue = this.getNextCRMItemQueue(  );
+        CRMItemQueue crmItemQueue = this.getNextCRMItemQueue( );
 
         if ( crmItemQueue != null )
         {
-            _crmItemQueueDAO.delete( crmItemQueue.getIdCRMItemQueue(  ) );
+            _crmItemQueueDAO.delete( crmItemQueue.getIdCRMItemQueue( ) );
 
-            return crmItemQueue.getCRMItem(  );
+            return crmItemQueue.getCRMItem( );
         }
 
         return null;
@@ -83,19 +82,19 @@ public class DatabaseQueue implements ICRMClientQueue
      * {@inheritDoc}
      */
     @Override
-    public int size(  )
+    public int size( )
     {
-        return _crmItemQueueDAO.getCountCRMItem(  );
+        return _crmItemQueueDAO.getCountCRMItem( );
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public CRMItemQueue getNextCRMItemQueue(  )
+    public CRMItemQueue getNextCRMItemQueue( )
     {
         // Get the id of the next mail item queue
-        int nIdCRMItemQueue = _crmItemQueueDAO.nextCRMItemQueueId(  );
+        int nIdCRMItemQueue = _crmItemQueueDAO.nextCRMItemQueueId( );
 
         if ( nIdCRMItemQueue != -1 )
         {

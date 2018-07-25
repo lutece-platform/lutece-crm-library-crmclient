@@ -37,7 +37,6 @@ import java.io.Serializable;
 
 import java.util.Map;
 
-
 /**
  *
  * ICRMItem
@@ -62,43 +61,53 @@ public interface ICRMItem extends Serializable
 
     /**
      * Get the url for WS
+     * 
      * @return the url for WS
      */
-    String getUrlForWS(  );
+    String getUrlForWS( );
 
     /**
      * Set the parameters of the crm item
-     * @param mapParameters the parameters
+     * 
+     * @param mapParameters
+     *            the parameters
      */
     void setParameters( Map<String, String> mapParameters );
 
     /**
      * Get the parameters
+     * 
      * @return the parameters
      */
-    Map<String, String> getParameters(  );
+    Map<String, String> getParameters( );
 
     /**
      * @return strCRMWebAppBaseURL the CRM webapp URL
      */
-    String getCRMWebAppBaseURL(  );
+    String getCRMWebAppBaseURL( );
 
     /**
      * Put a new parameter to the map parameters
-     * @param strKey the key of the parameter
-     * @param strValue the value of the parameter
+     * 
+     * @param strKey
+     *            the key of the parameter
+     * @param strValue
+     *            the value of the parameter
      */
     void putParameter( String strKey, String strValue );
 
     /**
      * the CRM web app Code
+     * 
      * @return the CRM web app Code
      */
-    String getCRMWebAppCode(  );
+    String getCRMWebAppCode( );
 
     /**
-     * set  the CRM web app code
-     * @param _strmCRMWebAppCode  the CRM web app code
+     * set the CRM web app code
+     * 
+     * @param _strmCRMWebAppCode
+     *            the CRM web app code
      */
     void setCRMWebAppCode( String _strmCRMWebAppCode );
 }

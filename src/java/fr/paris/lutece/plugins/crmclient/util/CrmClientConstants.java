@@ -33,7 +33,6 @@
  */
 package fr.paris.lutece.plugins.crmclient.util;
 
-
 /**
  *
  * CrmClientConstants

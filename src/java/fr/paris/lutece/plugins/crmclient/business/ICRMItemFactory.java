@@ -33,7 +33,6 @@
  */
 package fr.paris.lutece.plugins.crmclient.business;
 
-
 /**
  *
  * ICRMItemFactory
@@ -43,7 +42,9 @@ public interface ICRMItemFactory
 {
     /**
      * Instanciate a new CRM Item
-     * @param strBeanName the bean neam
+     * 
+     * @param strBeanName
+     *            the bean neam
      * @return an instance of {@link ICRMItem}
      */
     ICRMItem newCRMItem( String strBeanName );

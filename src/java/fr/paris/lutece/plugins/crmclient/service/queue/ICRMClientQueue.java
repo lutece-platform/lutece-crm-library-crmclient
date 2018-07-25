@@ -36,7 +36,6 @@ package fr.paris.lutece.plugins.crmclient.service.queue;
 import fr.paris.lutece.plugins.crmclient.business.CRMItemQueue;
 import fr.paris.lutece.plugins.crmclient.business.ICRMItem;
 
-
 /**
  *
  * ICRMClientQueue
@@ -48,25 +47,30 @@ public interface ICRMClientQueue
 
     /**
      * Get a crm item from the list and remove it from the queue
+     * 
      * @return The older crm item of the queue
      */
-    ICRMItem consume(  );
+    ICRMItem consume( );
 
     /**
      * Put a crm item into the list of the queue
-     * @param crmItem The crm item to add to the queue
+     * 
+     * @param crmItem
+     *            The crm item to add to the queue
      */
     void send( ICRMItem crmItem );
 
     /**
      * Get the size of the queue
+     * 
      * @return the number of crm item present in the queue
      */
-    int size(  );
+    int size( );
 
     /**
      * Return the first crm item in the queue
+     * 
      * @return the first crm item in the queue
      */
-    CRMItemQueue getNextCRMItemQueue(  );
+    CRMItemQueue getNextCRMItemQueue( );
 }
