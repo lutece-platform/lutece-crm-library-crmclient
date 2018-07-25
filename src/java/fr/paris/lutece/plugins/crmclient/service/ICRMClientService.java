@@ -414,4 +414,11 @@ public interface ICRMClientService
      */
     String getCRMUserAttributesJson( String strUserGuid, String strCRMWebAppCode )
         throws CRMException;
+    
+    /**
+     * Get the CRMDemand Types in JSON
+     * @return the CRM demand types
+     * @throws CRMException 
+     */
+    String getCRMDemandTypes( ) throws CRMException;
 }

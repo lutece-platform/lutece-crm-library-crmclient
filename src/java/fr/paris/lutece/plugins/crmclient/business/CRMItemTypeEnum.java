@@ -58,9 +58,8 @@ public enum CRMItemTypeEnum
     USER_ATTRIBUTES_XML( "crmclient.crmItemUserAttributesXml" ),
     USER_ATTRIBUTES_JSON( "crmclient.crmItemUserAttributesJson" ),
     NOTIFICATION( "crmclient.crmItemNotification" ),
-    NOTIFICATION_V2( "crmclient.crmItemNotificationV2" )
-    
-    ;
+    NOTIFICATION_V2( "crmclient.crmItemNotificationV2" ),
+    DEMAND_TYPES( "crmclient.crmItemDemandTypes" );
 
     private String _strBeanName;
 
