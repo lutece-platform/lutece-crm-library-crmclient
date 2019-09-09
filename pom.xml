@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.paris.lutece.plugins</groupId>
     <artifactId>library-crmclient</artifactId>
-    <version>2.0.4</version>
+    <version>2.0.5-SNAPSHOT</version>
     <name>Library CRM Client</name>
     <description>CRM Client library</description>
     
@@ -71,7 +71,7 @@
         <connection>scm:git:https://github.com/lutece-secteur-public/gru-library-crmclient.git</connection>
         <developerConnection>scm:git:https://github.com/lutece-secteur-public/gru-library-crmclient.git</developerConnection>
         <url>https://github.com/lutece-secteur-public/gru-library-crmclient.git</url>
-      <tag>library-crmclient-2.0.4</tag>
+      <tag>HEAD</tag>
   </scm>
     
 </project>
